@@ -1,4 +1,4 @@
-<section id="about">
+[11:53 am, 12/08/2026] Mahesh: <section id="about">
     <h2>About Me</h2>
 
     <div class="about-card">
@@ -31,3 +31,273 @@
 
     </div>
 </section>
+[11:59 am, 12/08/2026] Mahesh: <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ram Teja Valapalli | Portfolio</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #050816;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* =========================
+           ANIMATED BACKGROUND
+        ========================= */
+
+        body::before {
+            content: "";
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            background: #00e5ff;
+            border-radius: 50%;
+            filter: blur(180px);
+            opacity: 0.15;
+            top: -150px;
+            left: -150px;
+            z-index: -2;
+            animation: moveGlow 8s infinite alternate;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            background: #8b5cf6;
+            border-radius: 50%;
+            filter: blur(180px);
+            opacity: 0.15;
+            bottom: -150px;
+            right: -150px;
+            z-index: -2;
+            animation: moveGlow2 10s infinite alternate;
+        }
+
+        @keyframes moveGlow {
+
+            from {
+                transform: translate(0, 0);
+            }
+
+            to {
+                transform: translate(200px, 150px);
+            }
+        }
+
+        @keyframes moveGlow2 {
+
+            from {
+                transform: translate(0, 0);
+            }
+
+            to {
+                transform: translate(-200px, -150px);
+            }
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            position: fixed;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 1000px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 15px;
+
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+
+            z-index: 1000;
+
+            box-shadow:
+                0 10px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #00e5ff;
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================
+           SECTIONS
+        ========================= */
+
+        section {
+            min-height: 100vh;
+            padding: 120px 8%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        #home {
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-badge {
+            display: inline-block;
+
+            padding: 10px 20px;
+
+            border-radius: 50px;
+
+            background: rgba(0, 229, 255, 0.1);
+
+            border: 1px solid rgba(0, 229, 255, 0.5);
+
+            color: #00e5ff;
+
+            margin-bottom: 25px;
+
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .hero-title {
+            font-size: clamp(45px, 8vw, 90px);
+
+            font-weight: 900;
+
+            background: linear-gradient(
+                90deg,
+                #00e5ff,
+                #ffffff,
+                #8b5cf6
+            );
+
+            -webkit-background-clip: text;
+            color: transparent;
+
+            margin-bottom: 20px;
+
+            animation: titleGlow 4s infinite alternate;
+        }
+
+        @keyframes titleGlow {
+
+            from {
+                filter: drop-shadow(0 0 5px #00e5ff);
+            }
+
+            to {
+                filter: drop-shadow(0 0 30px #8b5cf6);
+            }
+        }
+
+        .hero-subtitle {
+            font-size: 25px;
+            color: #aaa;
+            margin-bottom: 15px;
+        }
+
+        .hero-description {
+            max-width: 650px;
+            color: #aaa;
+            line-height: 1.8;
+            margin-bottom: 35px;
+        }
+
+
+        /* =========================
+           BUTTONS
+        ========================= */
+
+        .buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 15px 30px;
+
+            border-radius: 50px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            transition: 0.4s;
+
+            display: inline-block;
+        }
+
+        .primary {
+            background: linear-gradient(
+                135deg,
+                #00e5ff,
+                #8b5cf6
+            );
+
+            color: white;
+
+            box-shadow:
+                0 10px 30px rgba(0, 229, 255, 0.3);
+        }
+
+        .secondary {
+            border: 1px solid #00e5ff;
+            color: #00e5ff;
+        }
+
+        .btn:hover {
+            transform:
+                translateY(-8px)
+                scale(1.05);
